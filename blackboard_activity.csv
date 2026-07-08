@@ -1,0 +1,4 @@
+student_id,current_grade,attendance_percent,missing_assignments,discussion_posts,last_login_days_ago
+1001,81,88,2,3,2
+1002,64,70,7,0,8
+1003,92,96,0,5,1

@@ -1,0 +1,4 @@
+student_id,first_name,last_name,program,catalog_year,gpa,credits_earned,academic_standing,advisor,email,va_student
+1001,Jordan,Smith,BSIT,2025,2.78,54,Good Standing,Professor Clarke,jordan.smith@example.edu,Yes
+1002,Taylor,Brown,BSIT,2025,1.95,36,Academic Warning,Professor Clarke,taylor.brown@example.edu,No
+1003,Morgan,Davis,ASIT,2026,3.52,21,Good Standing,Professor Clarke,morgan.davis@example.edu,Yes

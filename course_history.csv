@@ -1,0 +1,10 @@
+student_id,course_code,course_title,status,grade,credits,term
+1001,CGS1540,Database Management,Completed,B,3,2025-1
+1001,CTS2106,Computer Networking,Completed,C,3,2025-2
+1001,CTS2145,Cloud Essentials,Completed,B,3,2025-3
+1001,CTS3364,Information Security,In Progress,,3,2026-1
+1002,CGS1540,Database Management,Completed,D,3,2025-1
+1002,CTS2106,Computer Networking,Failed,F,3,2025-2
+1002,CTS2145,Cloud Essentials,In Progress,,3,2026-1
+1003,CGS1540,Database Management,Completed,A,3,2026-1
+1003,CTS2106,Computer Networking,In Progress,,3,2026-1

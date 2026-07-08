@@ -1,0 +1,11 @@
+program,catalog_year,course_code,course_title,credits,prerequisite
+BSIT,2025,CGS1540,Database Management,3,
+BSIT,2025,CTS2106,Computer Networking,3,
+BSIT,2025,CTS2145,Cloud Essentials,3,
+BSIT,2025,CIS3014,Enterprise Server Administration,3,CTS2145
+BSIT,2025,CTS3364,Information Security,3,CTS2106
+BSIT,2025,CTS4321,Advanced Cybersecurity,3,CTS3364
+ASIT,2026,CGS1540,Database Management,3,
+ASIT,2026,CTS2106,Computer Networking,3,
+ASIT,2026,CTS2145,Cloud Essentials,3,
+ASIT,2026,CIS3014,Enterprise Server Administration,3,CTS2145
