@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block content %}
+{% set s = audit.student %}
+<section class="grid">
+  <div class="card">
+    <h2>{{ s.first_name }} {{ s.last_name }}</h2>
+    <p><strong>Student ID:</strong> {{ s.student_id }}</p>
+    <p><strong>Program:</strong> {{ s.program }} | <strong>Catalog:</strong> {{ s.catalog_year }}</p>
+    <p><strong>GPA:</strong> {{ s.gpa }} | <strong>Standing:</strong> {{ s.academic_standing }}</p>
+    <p><strong>Credits Earned:</strong> {{ s.credits_earned }} | <strong>Required Credits Remaining:</strong> {{ audit.credits_remaining }}</p>
+    <a class="button primary" href="{{ url_for('student_pdf', student_id=s.student_id) }}">Generate PDF Packet</a>
+  </div>
+  <div class="card risk">
+    <h2>Student Success Risk</h2>
+    <div class="score">{{ audit.risk.overall }}</div>
+    <p><strong>{{ audit.risk.level }}</strong></p>
+    <p>Current Grade: {{ audit.risk.current_grade }} | Attendance: {{ audit.risk.attendance }}%</p>
+    <p>Missing Assignments: {{ audit.risk.missing_assignments }} | Discussions: {{ audit.risk.discussion_posts }}</p>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Degree Audit</h2>
+  <p><strong>Program completion:</strong> {{ audit.completion_percent }}%</p>
+  <table>
+    <thead>
+      <tr><th>Course</th><th>Title</th><th>Credits</th><th>Prerequisite</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+      {% for r in audit.rows %}
+      <tr>
+        <td>{{ r.course_code }}</td>
+        <td>{{ r.course_title }}</td>
+        <td>{{ r.credits }}</td>
+        <td>{{ r.prerequisite }}</td>
+        <td><span class="pill">{{ r.status }}</span></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+
+<section class="grid">
+  <div class="card">
+    <h2>Missing Courses</h2>
+    {% if audit.missing_courses %}
+      <ul>{% for c in audit.missing_courses %}<li>{{ c }}</li>{% endfor %}</ul>
+    {% else %}<p>No missing courses identified.</p>{% endif %}
+  </div>
+  <div class="card">
+    <h2>Prerequisite Issues</h2>
+    {% if audit.prereq_issues %}
+      <ul>{% for p in audit.prereq_issues %}<li>{{ p }}</li>{% endfor %}</ul>
+    {% else %}<p>No prerequisite issues identified.</p>{% endif %}
+  </div>
+</section>
+
+<section class="card">
+  <h2>Advisor Recommendations</h2>
+  <ul>{% for rec in audit.recommendations %}<li>{{ rec }}</li>{% endfor %}</ul>
+</section>
+{% endblock %}

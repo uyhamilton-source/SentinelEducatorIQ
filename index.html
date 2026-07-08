@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <h2>Advisor Dashboard</h2>
+  <p>Select a student to generate an advising packet and degree audit form.</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Student</th><th>ID</th><th>Program</th><th>GPA</th><th>Credits</th><th>Advisor</th><th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for s in students %}
+      <tr>
+        <td>{{ s.first_name }} {{ s.last_name }}</td>
+        <td>{{ s.student_id }}</td>
+        <td>{{ s.program }}</td>
+        <td>{{ s.gpa }}</td>
+        <td>{{ s.credits_earned }}</td>
+        <td>{{ s.advisor }}</td>
+        <td><a class="button" href="{{ url_for('student_detail', student_id=s.student_id) }}">Open Packet</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endblock %}

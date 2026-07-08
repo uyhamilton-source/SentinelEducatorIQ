@@ -1,0 +1,17 @@
+body { font-family: Arial, sans-serif; margin: 0; background: #f5f6f8; color: #1f2937; }
+header { background: #111827; color: white; padding: 20px 32px; }
+header h1 { margin: 0 0 8px 0; font-size: 24px; }
+nav a { color: white; margin-right: 18px; text-decoration: none; font-weight: bold; }
+main { padding: 28px 32px; }
+.card { background: white; border-radius: 12px; padding: 22px; margin-bottom: 22px; box-shadow: 0 2px 8px rgba(0,0,0,.07); }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 22px; }
+table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+th, td { border-bottom: 1px solid #e5e7eb; text-align: left; padding: 10px; }
+th { background: #f3f4f6; }
+.button { display: inline-block; padding: 9px 13px; border-radius: 8px; background: #374151; color: white; text-decoration: none; border: none; cursor: pointer; }
+.primary { background: #1d4ed8; }
+.pill { background: #e0e7ff; padding: 4px 8px; border-radius: 999px; font-size: 12px; }
+.score { font-size: 54px; font-weight: bold; color: #1d4ed8; }
+.flash { background: #dcfce7; border: 1px solid #86efac; padding: 12px; border-radius: 8px; margin-bottom: 18px; }
+form label { display: block; margin: 14px 0; font-weight: bold; }
+input[type=file] { display: block; margin-top: 6px; }

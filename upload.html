@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <h2>Upload CSV Exports</h2>
+  <p>Upload replacement CSV files from Anthology, Blackboard, or manual exports.</p>
+  <form method="post" enctype="multipart/form-data">
+    <label>Students CSV <input type="file" name="students" accept=".csv"></label>
+    <label>Program Requirements CSV <input type="file" name="requirements" accept=".csv"></label>
+    <label>Course History CSV <input type="file" name="history" accept=".csv"></label>
+    <label>Blackboard Activity CSV <input type="file" name="activity" accept=".csv"></label>
+    <button class="button primary" type="submit">Upload Files</button>
+  </form>
+</section>
+{% endblock %}
